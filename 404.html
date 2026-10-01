@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>FootQuiz</title>
+  <link rel="stylesheet" href="/assets/style.css">
+  <script>
+    (function () {
+      var m = location.pathname.match(/^\/([dls])\/([A-Za-z0-9]{6})\/?$/);
+      if (m) location.replace("/" + m[1] + "/?c=" + m[2].toUpperCase());
+      else if (/^\/j\/?/.test(location.pathname)) location.replace("/j/");
+    })();
+  </script>
+</head>
+<body>
+  <main>
+    <div class="brand">⚽ FootQuiz</div>
+    <h1>Page introuvable</h1>
+    <p>Ce lien ne mène nulle part. Demande à ton ami de te renvoyer
+      l'invitation.</p>
+    <a class="btn" href="/">Découvrir FootQuiz</a>
+  </main>
+</body>
+</html>
