@@ -1,0 +1,86 @@
+/* FootQuiz — « stade nocturne ». Aucune police ni ressource externe :
+   la page ne contacte personne d'autre que GitHub. */
+:root {
+  --bg: #0b1020;
+  --card: #141b2d;
+  --line: #243049;
+  --text: #e8edf5;
+  --muted: #93a0b8;
+  --accent: #2bd67b;
+  --accent-ink: #062414;
+}
+
+* { box-sizing: border-box; }
+
+html, body { margin: 0; }
+
+body {
+  min-height: 100vh;
+  background:
+    radial-gradient(120% 60% at 50% -10%, #1d2b4a 0%, transparent 60%),
+    var(--bg);
+  color: var(--text);
+  font: 16px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 16px;
+}
+
+main {
+  width: 100%;
+  max-width: 420px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  padding: 28px 22px;
+  text-align: center;
+}
+
+.brand {
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+h1 { font-size: 24px; line-height: 1.25; margin: 10px 0 8px; }
+
+p { color: var(--muted); margin: 0 0 16px; }
+
+.code {
+  font: 700 32px/1 ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+  letter-spacing: 0.18em;
+  background: var(--bg);
+  border: 1px dashed var(--line);
+  border-radius: 12px;
+  padding: 16px 8px;
+  margin: 8px 0 20px;
+}
+
+.btn {
+  display: block;
+  width: 100%;
+  padding: 14px 16px;
+  margin: 0 0 10px;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: transparent;
+  color: var(--text);
+  font: 600 16px/1.2 inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn.primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--accent-ink);
+}
+
+.btn[aria-disabled="true"] { opacity: 0.55; cursor: default; }
+
+.note { font-size: 13px; margin-top: 14px; }
+
+[hidden] { display: none !important; }

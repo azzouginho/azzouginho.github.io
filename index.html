@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FootQuiz — le quiz foot du quotidien</title>
+  <meta property="og:title" content="FootQuiz">
+  <meta property="og:description" content="Un défi foot par jour, les mêmes questions pour tout le monde.">
+  <link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+  <main>
+    <div class="brand">⚽ FootQuiz</div>
+    <h1>Le quiz foot du quotidien</h1>
+    <p>Un défi par jour, les mêmes questions pour tout le monde. Retrouve un
+      joueur à son parcours, à ses coéquipiers, et défie tes potes en duel
+      ou en ligue.</p>
+    <a id="installer" class="btn primary">Bientôt sur Google Play</a>
+  </main>
+  <script src="/assets/config.js"></script>
+  <script>
+    (function () {
+      var b = document.getElementById("installer");
+      if (window.FOOTQUIZ && window.FOOTQUIZ.storeUrl) {
+        b.textContent = "Installer FootQuiz";
+        b.href = window.FOOTQUIZ.storeUrl;
+      } else {
+        b.setAttribute("aria-disabled", "true");
+      }
+    })();
+  </script>
+</body>
+</html>
