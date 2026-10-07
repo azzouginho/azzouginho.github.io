@@ -84,3 +84,24 @@ p { color: var(--muted); margin: 0 0 16px; }
 .note { font-size: 13px; margin-top: 14px; }
 
 [hidden] { display: none !important; }
+
+a { color: var(--accent); }
+
+/* Pages de texte (politique de confidentialité) : plus larges, alignées à
+   gauche, en haut de l'écran plutôt qu'au centre. */
+body.doc { align-items: flex-start; }
+
+.doc main { max-width: 720px; text-align: left; }
+
+.doc h2 { font-size: 19px; margin: 28px 0 8px; }
+
+.doc h3 { font-size: 16px; margin: 18px 0 6px; color: var(--text); }
+
+.doc p, .doc li { color: #c4cddd; }
+
+.doc ul { padding-left: 20px; margin: 0 0 16px; }
+
+.doc li { margin-bottom: 6px; }
+
+/* Les passages qu'Enzo doit compléter avant publication. */
+mark { background: #f5d14e; color: #1a1400; padding: 0 3px; border-radius: 3px; }
